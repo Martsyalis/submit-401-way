@@ -1,5 +1,4 @@
 const expect = require('chai').expect;
-const should = require('chai').should();
 let math = require('./math');
 
 
@@ -28,8 +27,8 @@ describe('math', function() {
 
     describe('divide', function() {
         it('should return a result of division', function() {
-            // expect(math.divide(15,5)).to.equal(3);
-            expect(math.divide(15,0)).to.throw();
+            expect(math.divide(15,5)).to.equal(3);
+            expect(function () {math.divide(15,0);}).to.throw();
         });
         
     });
